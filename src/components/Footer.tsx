@@ -1,0 +1,76 @@
+import { Instagram, Mail, Phone, MapPin, Heart } from 'lucide-react';
+
+export default function Footer() {
+  return (
+    <footer className="bg-[#3B2A24] text-[#F6EFE8] py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          <div>
+            <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+              <Heart className="w-6 h-6 text-[#E7D8CC] fill-[#E7D8CC]" />
+              Brows By Amber
+            </h3>
+            <p className="text-[#E7D8CC] leading-relaxed">
+              Professional permanent makeup artistry dedicated to enhancing your natural
+              beauty with precision and care in the Benicia area.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
+            <div className="space-y-3">
+              <a
+                href="tel:+17075611588"
+                className="flex items-center gap-3 hover:text-white transition-colors group"
+              >
+                <Phone className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                (707) 561-1588
+              </a>
+
+              <a
+                href="mailto:amberazamar@gmail.com"
+                className="flex items-center gap-3 hover:text-white transition-colors group"
+              >
+                <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                amberazamar@gmail.com
+              </a>
+
+              <div className="flex items-center gap-3">
+                <MapPin className="w-5 h-5" />
+                Benicia, CA
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">Follow</h4>
+            <div className="space-y-3">
+              <a
+                href="https://instagram.com/amber.browsbyme"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 hover:text-white transition-colors group"
+              >
+                <Instagram className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                @amber.browsbyme
+              </a>
+            </div>
+
+            <div className="mt-8">
+              <h4 className="text-lg font-semibold text-white mb-4">Hours</h4>
+              <div className="space-y-2 text-sm text-[#E7D8CC]">
+                <p>Monday - Friday: 8am - 9pm</p>
+                <p>Saturday: 9am - 5pm</p>
+                <p>Sunday: 8am - 4pm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-8 border-t border-white/15 text-center text-white/70 text-sm">
+          <p>&copy; {new Date().getFullYear()} Brows By Amber. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
