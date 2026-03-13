@@ -2,17 +2,17 @@ import { useState } from "react";
 
 const teamImages = [
   {
-    src: "https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/honey-glow-beauty-bar-brows-by-amber-benicia-ca-1.png",
+    src: "https://raw.githubusercontent.com/goldenmeows/pmu-brows-by-amber/public/honey-glow-beauty-bar-brows-by-amber-benicia-ca-1.png",
     alt: "Honey Glow Beauty Bar studio team in Benicia, CA — powder brow specialists",
     caption: "Our team at Honey Glow Beauty Bar, Benicia's premier PMU studio.",
   },
   {
-    src: "https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/honey-glow-beauty-bar-brows-by-amber-benicia-ca-2.png",
+    src: "https://raw.githubusercontent.com/goldenmeows/pmu-brows-by-amber/public/honey-glow-beauty-bar-brows-by-amber-benicia-ca-2.png",
     alt: "Amber and her team providing powder brow services in Benicia California",
     caption: "A welcoming space where every client feels seen, safe, and beautiful.",
   },
   {
-    src: "https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/honey-glow-beauty-bar-brows-by-amber-benicia-ca-3.png",
+    src: "https://raw.githubusercontent.com/goldenmeows/pmu-brows-by-amber/public/honey-glow-beauty-bar-brows-by-amber-benicia-ca-3.png",
     alt: "Permanent makeup studio at Honey Glow Beauty Bar in Benicia CA",
     caption: "Serving Benicia, Vallejo, Fairfield & the greater Bay Area.",
   },
