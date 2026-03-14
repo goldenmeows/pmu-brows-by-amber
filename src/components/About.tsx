@@ -32,7 +32,7 @@ export default function About() {
         <div className="flex flex-col items-center text-center">
           <div className="w-72 h-72 rounded-full overflow-hidden border-4 border-[#C8A98B] shadow-xl mb-6">
             <img
-              src="https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/pmu-brows-by-amber-benicia-ca.png"
+              src="https://raw.githubusercontent.com/goldenmeows/pmu-brows-by-amber/main/public/pmu-brows-by-amber-benicia-ca.png"
               alt="Amber Amazar permanent powder brow artist in Benicia California"
               className="w-full h-full object-cover object-top"
               referrerPolicy="no-referrer"
@@ -62,7 +62,6 @@ export default function About() {
               className="w-full h-80 object-cover"
               referrerPolicy="no-referrer"
             />
-            {/* Prev / Next */}
             <button
               onClick={prev}
               className="absolute left-3 top-1/2 -translate-y-1/2 bg-[#7d6659]/70 hover:bg-[#7d6659] text-[#F5EFEA] rounded-full w-9 h-9 flex items-center justify-center text-lg transition"
@@ -76,13 +75,9 @@ export default function About() {
               ›
             </button>
           </div>
-
-          {/* Caption */}
           <p className="mt-4 text-sm italic text-[#E8DED6] text-center px-4">
             {teamImages[current].caption}
           </p>
-
-          {/* Dots */}
           <div className="flex gap-2 mt-4">
             {teamImages.map((_, i) => (
               <button
