@@ -32,7 +32,7 @@ export default function About() {
         <div className="flex flex-col items-center text-center">
           <div className="w-72 h-72 rounded-full overflow-hidden border-4 border-[#C8A98B] shadow-xl mb-6">
             <img
-              src="https://raw.githubusercontent.com/goldenmeows/pmu-brows-by-amber/main/public/pmu-brows-by-amber-benicia-ca.png"
+              src="https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/pmu-brows-by-amber-benicia-ca.png"
               alt="Amber Amazar permanent powder brow artist in Benicia California"
               className="w-full h-full object-cover object-top"
               referrerPolicy="no-referrer"
