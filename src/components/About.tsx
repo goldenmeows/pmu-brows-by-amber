@@ -2,19 +2,19 @@ import { useState } from "react";
 
 const teamImages = [
   {
-    src: "https://raw.githubusercontent.com/goldenmeows/pmu-brows-by-amber/public/honey-glow-beauty-bar-brows-by-amber-benicia-ca-1.png",
-    alt: "Honey Glow Beauty Bar studio team in Benicia, CA — powder brow specialists",
-    caption: "Our team at Honey Glow Beauty Bar, Benicia's premier PMU studio.",
+    src: "https://raw.githubusercontent.com/goldenmeows/pmu-brows-by-amber/main/public/honey-glow-beauty-bar-brows-by-amber-benicia-ca-1.png",
+    alt: "Honey Glow Beauty Bar team in Benicia CA — lashes, hair, skin, and permanent makeup specialists",
+    caption: "At Honey Glow Beauty Bar in Benicia, CA, our goal is simple: never overpower the beauty you already have — just give it a little glow. From lashes to hair to skin, every service is designed to make you feel welcomed, comfortable, and beautifully yourself.",
   },
   {
-    src: "https://raw.githubusercontent.com/goldenmeows/pmu-brows-by-amber/public/honey-glow-beauty-bar-brows-by-amber-benicia-ca-2.png",
-    alt: "Amber and her team providing powder brow services in Benicia California",
-    caption: "A welcoming space where every client feels seen, safe, and beautiful.",
+    src: "https://raw.githubusercontent.com/goldenmeows/pmu-brows-by-amber/main/public/honey-glow-beauty-bar-brows-by-amber-benicia-ca-2.png",
+    alt: "Amber powder brow artist at Honey Glow Beauty Bar Benicia California",
+    caption: "As a busy mom of three and a permanent makeup artist, Amber understands the value of waking up ready. Powder brows at Honey Glow Beauty Bar transform how you look and feel — no makeup routine required.",
   },
   {
-    src: "https://raw.githubusercontent.com/goldenmeows/pmu-brows-by-amber/public/honey-glow-beauty-bar-brows-by-amber-benicia-ca-3.png",
-    alt: "Permanent makeup studio at Honey Glow Beauty Bar in Benicia CA",
-    caption: "Serving Benicia, Vallejo, Fairfield & the greater Bay Area.",
+    src: "https://raw.githubusercontent.com/goldenmeows/pmu-brows-by-amber/main/public/honey-glow-beauty-bar-brows-by-amber-benicia-ca-3.png",
+    alt: "Honey Glow Beauty Bar studio Benicia CA — hair extensions, waxing, facials, lash extensions",
+    caption: "From luxurious hair extensions and lash lifts to full-body waxing and customized facials, Honey Glow Beauty Bar in Benicia is a full-service beauty studio where every woman leaves 100% satisfied.",
   },
 ];
 
