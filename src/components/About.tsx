@@ -108,7 +108,7 @@ const styles = `
   /* Portrait frame */
   .portrait-frame {
     position: relative;
-    width: 240px;
+    width: 340px;
     height: 240px;
     margin-bottom: 28px;
   }
