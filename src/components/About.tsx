@@ -204,17 +204,6 @@ const styles = `
     transition: opacity 0.45s ease;
   }
 
-  .ab-carousel-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 55%;
-    background: linear-gradient(to bottom, transparent, rgba(85,60,50,0.88));
-    pointer-events: none;
-    z-index: 1;
-  }
-
   .ab-caption {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 300;
