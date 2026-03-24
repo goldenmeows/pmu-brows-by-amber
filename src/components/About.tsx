@@ -1,318 +1,305 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const teamImages = [
   {
     src: "https://raw.githubusercontent.com/goldenmeows/pmu-brows-by-amber/main/public/honey-glow-beauty-bar-brows-by-amber-benicia-ca-2.png",
-    alt: "Honey Glow Beauty Bar team in Benicia CA — lashes, hair, skin, and permanent makeup specialists",
-    caption: "At Honey Glow Beauty Bar in Benicia, CA, our goal is simple: never overpower the beauty you already have — just give it a little glow.",
+    alt: "Honey Glow Beauty Bar team in Benicia CA",
+    caption: "At Honey Glow Beauty Bar in Benicia, CA — never overpower the beauty you already have, just give it a little glow.",
   },
   {
     src: "https://raw.githubusercontent.com/goldenmeows/pmu-brows-by-amber/main/public/honey-glow-beauty-bar-brows-by-amber-benicia-ca-1.png",
-    alt: "Amber powder brow artist at Honey Glow Beauty Bar Benicia California",
-    caption: "From luxurious hair extensions and lash lifts to full-body waxing and customized facials — every woman leaves 100% satisfied.",
+    alt: "Amber powder brow artist at Honey Glow Beauty Bar",
+    caption: "From lash lifts to customized facials — every woman leaves 100% satisfied.",
   },
   {
     src: "https://raw.githubusercontent.com/goldenmeows/pmu-brows-by-amber/main/public/honey-glow-beauty-bar-brows-by-amber-benicia-ca-3.png",
-    alt: "Honey Glow Beauty Bar studio Benicia CA — hair extensions, waxing, facials, lash extensions",
+    alt: "Honey Glow Beauty Bar studio Benicia CA",
     caption: "Powder brows that transform how you look and feel — no makeup routine required.",
   },
 ];
 
 const styles = `
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
 
-  .about-section {
-    position: relative;
+  .ab-section {
     width: 100%;
-    padding: 120px 0 140px;
     background: #7d6659;
+    padding: 100px 0 120px;
     overflow: hidden;
+    position: relative;
     font-family: 'Jost', sans-serif;
   }
 
-  /* Noise texture overlay */
-  .about-section::before {
+  .ab-section::after {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-    opacity: 0.35;
+    background: radial-gradient(ellipse 70% 50% at 50% 45%, rgba(210,175,120,0.07) 0%, transparent 70%);
     pointer-events: none;
   }
 
-  /* Warm radial glow from center */
-  .about-section::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(180, 130, 80, 0.09) 0%, transparent 70%);
-    pointer-events: none;
-  }
-
-  .about-inner {
+  .ab-inner {
     position: relative;
     z-index: 1;
-    max-width: 1100px;
+    max-width: 1160px;
     margin: 0 auto;
-    padding: 0 48px;
+    padding: 0 60px;
   }
 
-  /* ─── Section label ─── */
-  .about-label {
+  .ab-label {
     text-align: center;
     font-family: 'Jost', sans-serif;
     font-weight: 400;
-    font-size: 11px;
-    letter-spacing: 0.35em;
+    font-size: 10px;
+    letter-spacing: 0.38em;
     text-transform: uppercase;
     color: #C8A067;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
-  /* ─── Divider ornament ─── */
-  .ornament {
+  .ab-ornament {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
-    margin-bottom: 72px;
+    gap: 14px;
+    margin-bottom: 64px;
   }
-  .ornament-line {
-    width: 80px;
+  .ab-line {
+    width: 72px;
     height: 1px;
-    background: linear-gradient(to right, transparent, #C8A067 60%, transparent);
+    background: linear-gradient(to right, transparent, rgba(200,160,103,0.7));
   }
-  .ornament-diamond {
-    width: 6px;
-    height: 6px;
+  .ab-line-rev {
+    width: 72px;
+    height: 1px;
+    background: linear-gradient(to left, transparent, rgba(200,160,103,0.7));
+  }
+  .ab-diamond {
+    width: 5px;
+    height: 5px;
     background: #C8A067;
     transform: rotate(45deg);
     flex-shrink: 0;
   }
 
-  /* ─── Two column grid ─── */
-  .about-grid {
+  .ab-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: start;
-  }
-
-  /* ─── LEFT column ─── */
-  .about-left {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 380px 1fr;
+    gap: 72px;
     align-items: center;
   }
 
-  /* Portrait frame */
-  .portrait-frame {
-    position: relative;
-    width: 240px;
-    height: 240px;
-    margin-bottom: 28px;
+  /* LEFT */
+  .ab-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-  .portrait-frame::before {
+
+  .ab-portrait-wrap {
+    position: relative;
+    width: 210px;
+    height: 210px;
+    margin-bottom: 24px;
+    flex-shrink: 0;
+  }
+  .ab-portrait-wrap::before {
     content: '';
     position: absolute;
-    inset: -8px;
+    inset: -7px;
     border-radius: 50%;
     background: conic-gradient(from 0deg, #C8A067, #e8d5a3, #C8A067, #9d7a45, #C8A067);
-    opacity: 0.7;
+    opacity: 0.75;
   }
-  .portrait-frame::after {
+  .ab-portrait-wrap::after {
     content: '';
     position: absolute;
     inset: -2px;
     border-radius: 50%;
     background: #7d6659;
   }
-  .portrait-img {
+  .ab-portrait {
     position: relative;
     z-index: 1;
     width: 100%;
     height: 100%;
     border-radius: 50%;
     overflow: hidden;
-    border: 2px solid #C8A067;
   }
-  .portrait-img img {
+  .ab-portrait img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top;
+    object-position: top center;
+    display: block;
   }
 
-  .artist-name {
+  .ab-name {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 500;
-    font-size: 26px;
+    font-size: 27px;
     color: #F5EDE1;
-    letter-spacing: 0.06em;
-    margin-bottom: 4px;
-    text-align: center;
+    letter-spacing: 0.05em;
+    margin-bottom: 5px;
   }
-  .artist-title {
+  .ab-role {
     font-family: 'Jost', sans-serif;
     font-weight: 300;
-    font-size: 11px;
-    letter-spacing: 0.3em;
+    font-size: 10px;
+    letter-spacing: 0.32em;
     text-transform: uppercase;
     color: #C8A067;
-    margin-bottom: 40px;
-    text-align: center;
+    margin-bottom: 34px;
   }
 
-  /* Approach text */
-  .approach-heading {
+  .ab-heading {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 300;
-    font-size: 42px;
-    line-height: 1.1;
+    font-size: 46px;
+    line-height: 1.08;
     color: #F5EDE1;
     margin-bottom: 24px;
-    text-align: center;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.01em;
   }
-  .approach-heading em {
+  .ab-heading em {
     font-style: italic;
     color: #C8A067;
+    display: block;
   }
 
-  .approach-text {
+  .ab-divider {
+    width: 34px;
+    height: 1px;
+    background: rgba(200,160,103,0.5);
+    margin: 0 auto 24px;
+  }
+
+  .ab-body {
     font-family: 'Jost', sans-serif;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 14.5px;
     line-height: 1.9;
-    color: #C4B09A;
-    text-align: center;
-    max-width: 380px;
+    color: #E0CFC2;
+    max-width: 320px;
   }
 
-  .approach-divider {
-    width: 40px;
-    height: 1px;
-    background: #C8A067;
-    margin: 28px auto;
-    opacity: 0.6;
-  }
-
-  /* ─── RIGHT column ─── */
-  .about-right {
+  /* RIGHT */
+  .ab-right {
     display: flex;
     flex-direction: column;
-    padding-top: 12px;
+    align-items: center;
+    width: 100%;
   }
 
-  .carousel-wrapper {
+  .ab-carousel {
     position: relative;
-    border-radius: 4px;
+    width: 100%;
+    border-radius: 6px;
     overflow: hidden;
     box-shadow:
-      0 4px 24px rgba(0,0,0,0.5),
-      0 0 0 1px rgba(200, 160, 103, 0.25);
+      0 0 0 1px rgba(200,160,103,0.35),
+      0 8px 40px rgba(0,0,0,0.3);
+    background: #7d6659;
   }
 
-  .carousel-img {
+  .ab-carousel img {
     width: 100%;
-    height: 400px;
+    height: 460px;
     object-fit: cover;
+    object-position: center top;
     display: block;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.45s ease;
   }
 
-  /* Golden overlay on image */
-  .carousel-wrapper::after {
-    content: '';
+  .ab-carousel-overlay {
     position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      to bottom,
-      transparent 50%,
-      rgba(100, 79, 68, 0.82) 100%
-    );
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 55%;
+    background: linear-gradient(to bottom, transparent, rgba(85,60,50,0.88));
     pointer-events: none;
+    z-index: 1;
   }
 
-  /* Caption overlaid on image bottom */
-  .carousel-caption {
+  .ab-caption {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 2;
-    padding: 28px 28px 24px;
+    padding: 20px 28px 22px;
     font-family: 'Cormorant Garamond', serif;
     font-weight: 300;
     font-style: italic;
-    font-size: 16px;
-    line-height: 1.6;
-    color: rgba(245, 237, 225, 0.9);
+    font-size: 15.5px;
+    line-height: 1.55;
+    color: rgba(245,237,225,0.92);
+    transition: opacity 0.45s ease;
   }
 
-  /* Nav arrows */
-  .carousel-btn {
+  .ab-btn {
     position: absolute;
-    top: 50%;
+    top: 42%;
     transform: translateY(-50%);
     z-index: 3;
-    width: 40px;
-    height: 40px;
-    background: rgba(100, 79, 68, 0.7);
-    border: 1px solid rgba(200, 160, 103, 0.4);
-    color: #C8A067;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
+    background: rgba(85,60,50,0.65);
+    border: 1px solid rgba(200,160,103,0.45);
+    color: #C8A067;
+    font-size: 22px;
+    line-height: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
     cursor: pointer;
-    transition: all 0.25s ease;
-    backdrop-filter: blur(4px);
-    line-height: 1;
+    backdrop-filter: blur(6px);
+    transition: all 0.2s ease;
   }
-  .carousel-btn:hover {
-    background: rgba(200, 160, 103, 0.2);
+  .ab-btn:hover {
+    background: rgba(200,160,103,0.22);
     border-color: #C8A067;
   }
-  .carousel-btn.prev { left: 16px; }
-  .carousel-btn.next { right: 16px; }
+  .ab-btn-prev { left: 14px; }
+  .ab-btn-next { right: 14px; }
 
-  /* Dots */
-  .carousel-dots {
+  .ab-dots {
     display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 20px;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
   }
-  .dot {
-    width: 28px;
+  .ab-dot {
     height: 2px;
-    background: rgba(200, 160, 103, 0.25);
     border-radius: 2px;
     cursor: pointer;
     transition: all 0.3s ease;
+    background: rgba(200,160,103,0.28);
+    width: 24px;
+    border: none;
+    padding: 0;
   }
-  .dot.active {
+  .ab-dot-on {
     background: #C8A067;
-    width: 44px;
+    width: 40px;
   }
 
-  /* ─── Responsive ─── */
-  @media (max-width: 768px) {
-    .about-grid {
+  @media (max-width: 900px) {
+    .ab-grid {
       grid-template-columns: 1fr;
-      gap: 56px;
+      gap: 52px;
     }
-    .about-inner {
-      padding: 0 24px;
+    .ab-inner {
+      padding: 0 28px;
     }
-    .about-section {
-      padding: 80px 0 100px;
+    .ab-section {
+      padding: 72px 0 88px;
     }
-    .portrait-frame {
-      width: 200px;
-      height: 200px;
+    .ab-carousel img {
+      height: 320px;
     }
   }
 `;
@@ -323,10 +310,7 @@ export default function About() {
 
   const go = (idx) => {
     setFading(true);
-    setTimeout(() => {
-      setCurrent(idx);
-      setFading(false);
-    }, 250);
+    setTimeout(() => { setCurrent(idx); setFading(false); }, 230);
   };
 
   const prev = () => go(current === 0 ? teamImages.length - 1 : current - 1);
@@ -335,23 +319,22 @@ export default function About() {
   return (
     <>
       <style>{styles}</style>
-      <section className="about-section">
-        <div className="about-inner">
+      <section className="ab-section">
+        <div className="ab-inner">
 
-          {/* Label + ornament */}
-          <p className="about-label">The Studio &amp; the Artist</p>
-          <div className="ornament">
-            <span className="ornament-line" />
-            <span className="ornament-diamond" />
-            <span className="ornament-line" style={{ background: "linear-gradient(to left, transparent, #C8A067 60%, transparent)" }} />
+          <p className="ab-label">The Artist</p>
+          <div className="ab-ornament">
+            <span className="ab-line" />
+            <span className="ab-diamond" />
+            <span className="ab-line-rev" />
           </div>
 
-          <div className="about-grid">
+          <div className="ab-grid">
 
             {/* LEFT */}
-            <div className="about-left">
-              <div className="portrait-frame">
-                <div className="portrait-img">
+            <div className="ab-left">
+              <div className="ab-portrait-wrap">
+                <div className="ab-portrait">
                   <img
                     src="https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/pmu-brows-by-amber-benicia-ca.png"
                     alt="Amber Amazar permanent powder brow artist in Benicia California"
@@ -360,22 +343,22 @@ export default function About() {
                 </div>
               </div>
 
-              <p className="artist-name">Amber Amazar</p>
-              <p className="artist-title">Permanent Powder Brow Artist</p>
+              <p className="ab-name">Amber Amazar</p>
+              <p className="ab-role">Permanent Powder Brow Artist</p>
 
-              <h2 className="approach-heading">
-                My<br /><em>Approach</em>
+              <h2 className="ab-heading">
+                My<em>Approach</em>
               </h2>
 
-              <p className="approach-text">
+              <p className="ab-body">
                 Every face is unique, so every set of brows I create is fully customized.
                 I take time to carefully map your brows, study your facial symmetry,
                 and design a shape that complements your natural beauty.
               </p>
 
-              <div className="approach-divider" />
+              <div className="ab-divider" />
 
-              <p className="approach-text">
+              <p className="ab-body">
                 I specialize in soft, natural powder brows that heal beautifully and
                 enhance your features without looking harsh or overdone. My goal is
                 simple: help you wake up feeling confident and ready to roll out of bed beautiful.
@@ -383,33 +366,32 @@ export default function About() {
             </div>
 
             {/* RIGHT */}
-            <div className="about-right">
-              <div className="carousel-wrapper">
+            <div className="ab-right">
+              <div className="ab-carousel">
                 <img
                   src={teamImages[current].src}
                   alt={teamImages[current].alt}
-                  className="carousel-img"
                   referrerPolicy="no-referrer"
                   style={{ opacity: fading ? 0 : 1 }}
                 />
-                <div className="carousel-caption" style={{ opacity: fading ? 0 : 1, transition: "opacity 0.5s ease" }}>
+                <div className="ab-carousel-overlay" />
+                <div className="ab-caption" style={{ opacity: fading ? 0 : 1 }}>
                   {teamImages[current].caption}
                 </div>
-                <button className="carousel-btn prev" onClick={prev} aria-label="Previous">‹</button>
-                <button className="carousel-btn next" onClick={next} aria-label="Next">›</button>
+                <button className="ab-btn ab-btn-prev" onClick={prev} aria-label="Previous">‹</button>
+                <button className="ab-btn ab-btn-next" onClick={next} aria-label="Next">›</button>
               </div>
 
-              <div className="carousel-dots">
+              <div className="ab-dots">
                 {teamImages.map((_, i) => (
                   <button
                     key={i}
-                    className={`dot${i === current ? " active" : ""}`}
+                    className={`ab-dot${i === current ? " ab-dot-on" : ""}`}
                     onClick={() => go(i)}
-                    aria-label={`Go to slide ${i + 1}`}
+                    aria-label={`Slide ${i + 1}`}
                   />
                 ))}
               </div>
-
             </div>
 
           </div>
