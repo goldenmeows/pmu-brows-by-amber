@@ -233,7 +233,7 @@ const styles = `
     font-family: 'Cormorant Garamond', serif;
     font-weight: 300;
     font-style: italic;
-    font-size: 15.5px;
+    font-size: 20px;
     line-height: 1.55;
     color: rgba(245,237,225,0.92);
     transition: opacity 0.45s ease;
