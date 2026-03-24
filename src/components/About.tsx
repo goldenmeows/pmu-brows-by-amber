@@ -241,7 +241,7 @@ const styles = `
 
   .ab-btn {
     position: absolute;
-    top: 42%;
+    top: 20%;
     transform: translateY(-50%);
     z-index: 3;
     width: 38px;
