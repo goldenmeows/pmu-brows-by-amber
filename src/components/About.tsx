@@ -184,13 +184,36 @@ const styles = `
     max-width: 320px;
   }
 
-  /* RIGHT */
-  .ab-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
+{/* RIGHT */}
+<div className="ab-right">
+  <div className="ab-carousel">
+    <img
+      src={teamImages[current].src}
+      alt={teamImages[current].alt}
+      referrerPolicy="no-referrer"
+      style={{ opacity: fading ? 0 : 1 }}
+    />
+    <div className="ab-carousel-overlay" />
+    <button className="ab-btn ab-btn-prev" onClick={prev} aria-label="Previous">‹</button>
+    <button className="ab-btn ab-btn-next" onClick={next} aria-label="Next">›</button>
+  </div>
+
+  {/* Caption BELOW carousel — changes with slide */}
+  <p className="ab-caption-below" style={{ opacity: fading ? 0 : 1 }}>
+    {teamImages[current].caption}
+  </p>
+
+  <div className="ab-dots">
+    {teamImages.map((_, i) => (
+      <button
+        key={i}
+        className={`ab-dot${i === current ? " ab-dot-on" : ""}`}
+        onClick={() => go(i)}
+        aria-label={`Slide ${i + 1}`}
+      />
+    ))}
+  </div>
+</div>
 
   .ab-carousel {
     position: relative;
@@ -223,21 +246,19 @@ const styles = `
     z-index: 1;
   }
 
-  .ab-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    padding: 20px 28px 22px;
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 300;
-    font-style: italic;
-    font-size: 20px;
-    line-height: 1.55;
-    color: rgba(245,237,225,0.92);
-    transition: opacity 0.45s ease;
-  }
+.ab-caption-below {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #E0CFC2;
+  text-align: center;
+  max-width: 100%;
+  padding: 14px 8px 0;
+  min-height: 52px; /* prevents layout shift as text changes */
+  transition: opacity 0.45s ease;
+}
 
   .ab-btn {
     position: absolute;
