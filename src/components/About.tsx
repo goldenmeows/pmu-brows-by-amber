@@ -199,7 +199,7 @@ const styles = `
     width: 100%;
     height: 460px;
     object-fit: cover;
-    object-position: center bottom;
+    object-position: center top;
     display: block;
     transition: opacity 0.45s ease;
   }
