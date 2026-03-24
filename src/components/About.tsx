@@ -184,37 +184,6 @@ const styles = `
     max-width: 320px;
   }
 
-{/* RIGHT */}
-<div className="ab-right">
-  <div className="ab-carousel">
-    <img
-      src={teamImages[current].src}
-      alt={teamImages[current].alt}
-      referrerPolicy="no-referrer"
-      style={{ opacity: fading ? 0 : 1 }}
-    />
-    <div className="ab-carousel-overlay" />
-    <button className="ab-btn ab-btn-prev" onClick={prev} aria-label="Previous">‹</button>
-    <button className="ab-btn ab-btn-next" onClick={next} aria-label="Next">›</button>
-  </div>
-
-  {/* Caption BELOW carousel — changes with slide */}
-  <p className="ab-caption-below" style={{ opacity: fading ? 0 : 1 }}>
-    {teamImages[current].caption}
-  </p>
-
-  <div className="ab-dots">
-    {teamImages.map((_, i) => (
-      <button
-        key={i}
-        className={`ab-dot${i === current ? " ab-dot-on" : ""}`}
-        onClick={() => go(i)}
-        aria-label={`Slide ${i + 1}`}
-      />
-    ))}
-  </div>
-</div>
-
   .ab-carousel {
     position: relative;
     width: 100%;
