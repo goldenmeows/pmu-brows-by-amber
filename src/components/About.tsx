@@ -215,19 +215,18 @@ const styles = `
     z-index: 1;
   }
 
-.ab-caption-below {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 300;
-  font-style: italic;
-  font-size: 15px;
-  line-height: 1.6;
-  color: #E0CFC2;
-  text-align: center;
-  max-width: 100%;
-  padding: 14px 8px 0;
-  min-height: 52px; /* prevents layout shift as text changes */
-  transition: opacity 0.45s ease;
-}
+  .ab-caption {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #E0CFC2;
+    text-align: center;
+    padding: 20px 12px 0;
+    min-height: 50px;
+    transition: opacity 0.45s ease;
+  }
 
   .ab-btn {
     position: absolute;
@@ -365,20 +364,22 @@ export default function About() {
                   style={{ opacity: fading ? 0 : 1 }}
                 />
                 <div className="ab-carousel-overlay" />
-                <div className="ab-caption" style={{ opacity: fading ? 0 : 1 }}>
-                  {teamImages[current].caption}
-                </div>
-                <button className="ab-btn ab-btn-prev" onClick={prev} aria-label="Previous">‹</button>
-                <button className="ab-btn ab-btn-next" onClick={next} aria-label="Next">›</button>
+                <button className="ab-btn ab-btn-prev" onClick={prev} aria-label="Previous slide">‹</button>
+                <button className="ab-btn ab-btn-next" onClick={next} aria-label="Next slide">›</button>
               </div>
 
-              <div className="ab-dots">
+              <p className="ab-caption" style={{ opacity: fading ? 0 : 1 }}>
+                {teamImages[current].caption}
+              </p>
+
+              <div className="ab-dots" role="group" aria-label="Carousel slide indicators">
                 {teamImages.map((_, i) => (
                   <button
                     key={i}
                     className={`ab-dot${i === current ? " ab-dot-on" : ""}`}
                     onClick={() => go(i)}
-                    aria-label={`Slide ${i + 1}`}
+                    aria-label={`Go to slide ${i + 1}`}
+                    aria-current={i === current ? "true" : "false"}
                   />
                 ))}
               </div>
