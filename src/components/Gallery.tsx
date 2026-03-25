@@ -35,7 +35,7 @@ export default function Gallery() {
   textAlign: "center",
   fontFamily: 'Cormorant, serif',
   fontWeight: 600,
-  fontSize: "60px",
+  fontSize: "50px",
   fontStyle: "italic",
   color: "#C8A067",
   marginBottom: "18px"
