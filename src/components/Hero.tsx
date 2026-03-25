@@ -31,11 +31,6 @@ backgroundImage: "url('https://raw.githubusercontent.com/goldenmeows/pmubrowsbya
           className={`flex justify-center mb-10 ${baseAnim} ${show}`}
           style={{ transitionDelay: '80ms' }}
         >
-          <img
-            src="/Untitled_design_(26)_(1).png"
-            alt="Brows By Amber logo"
-            className="w-28 h-28 sm:w-32 sm:h-32 object-contain"
-          />
         </div>
 
         <div
