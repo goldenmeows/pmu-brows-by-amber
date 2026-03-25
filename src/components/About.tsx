@@ -298,6 +298,15 @@ export default function About() {
     <>
       <style>{styles}</style>
       <section className="ab-section">
+        <div className="ab-inner">
+
+          <p className="ab-label"></p>
+          <div className="ab-ornament">
+            <span className="ab-line" />
+            <span className="ab-diamond" />
+            <span className="ab-line-rev" />
+          </div>
+
           <div className="ab-grid">
 
             {/* LEFT */}
