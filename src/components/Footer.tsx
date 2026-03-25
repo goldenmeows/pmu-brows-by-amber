@@ -73,7 +73,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/15 text-center text-white/70 text-sm">
-          <p>&copy; {new Date().getFullYear()} Brows By Amber. All rights reserved. A <a href="https://solorodesign.com/portfolio" target="_blank" rel="noopener noreferrer" style={{color: 'inherit', textDecoration: 'underline'}}>Soloro Design</a> experience.</p>
+          <p>&copy; {new Date().getFullYear()} Brows By Amber. All rights reserved. A <a href="https://solorodesign.com" target="_blank" rel="noopener noreferrer" style={{color: 'inherit', textDecoration: 'underline'}}>Soloro Design</a> experience.</p>
         </div>
       </div>
     </footer>
