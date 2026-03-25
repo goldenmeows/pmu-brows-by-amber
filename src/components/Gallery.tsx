@@ -65,7 +65,6 @@ export default function Gallery() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
                   </div>
                 </div>
-              </button>
             ))}
           </div>
       </section>
