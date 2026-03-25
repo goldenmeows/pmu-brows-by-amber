@@ -59,18 +59,12 @@ const styles = `
   .ab-label {
     text-align: center;
     font-family: 'Cormorant', serif';
-    font-weight: 400;
+    font-weight: 600;
     font-size: 50px;
     font-style:'italic',
     color: #C8A067;
     margin-bottom: 18px;
-  }
-  .ab-ornament {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-    margin-bottom: 72px;
+
   }
   .ab-line      { width: 72px; height: 1px; background: linear-gradient(to right, transparent, rgba(200,160,103,0.7)); }
   .ab-line-rev  { width: 72px; height: 1px; background: linear-gradient(to left,  transparent, rgba(200,160,103,0.7)); }
