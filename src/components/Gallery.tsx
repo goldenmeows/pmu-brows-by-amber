@@ -32,8 +32,8 @@ export default function Gallery() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
 <h2 style={{ textAlign: 'center', fontFamily: "'Cormorant', serif", fontWeight: 600, fontSize: '50px', fontStyle: 'italic', color: '#C8A067', marginBottom: '18px' }}
-              Crafted By Amber
-            </h2>
+  Crafted By Amber
+</h2>
             <p className="text-lg text-stone-600 max-w-2xl mx-auto">
               Browse through Amber's permanent makeup transformations
             </p>
