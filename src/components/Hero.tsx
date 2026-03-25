@@ -26,6 +26,17 @@ backgroundImage: "url('https://raw.githubusercontent.com/goldenmeows/pmubrowsbya
     >
       <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-8 py-24 text-center">
         <div
+          className={`flex justify-center mb-10 ${baseAnim} ${show}`}
+          style={{ transitionDelay: '80ms' }}
+        >
+          <img
+            src="/Untitled_design_(26)_(1).png"
+            alt="Brows By Amber logo"
+            className="w-28 h-28 sm:w-32 sm:h-32 object-contain"
+          />
+        </div>
+
+        <div
           className={`inline-flex items-center gap-2 px-4 py-2 bg-white/70 backdrop-blur-sm rounded-full shadow-sm mb-8 ${baseAnim} ${show}`}
           style={{ transitionDelay: '200ms' }}
         >
