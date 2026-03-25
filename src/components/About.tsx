@@ -90,7 +90,7 @@ const styles = `
     background: rgba(200,160,103,0.2);
   }
   .ab-divider-label {
-    font-family: 'Jost', sans-serif;
+    font-family: 'Cormorant, serif';
     font-weight: 400;
     font-size: 10px;
     letter-spacing: 0.38em;
