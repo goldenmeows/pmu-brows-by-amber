@@ -34,8 +34,8 @@ export default function Gallery() {
 <h2 style={{
   textAlign: "center",
   fontFamily: 'Cormorant, serif',
-  fontWeight: 400,
-  fontSize: "30px",
+  fontWeight: 600,
+  fontSize: "40px",
   fontStyle: "italic",
   color: "#C8A067",
   marginBottom: "18px"
