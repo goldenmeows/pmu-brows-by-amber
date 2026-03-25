@@ -28,6 +28,8 @@ backgroundImage: "url('https://raw.githubusercontent.com/goldenmeows/pmubrowsbya
         <div
           className={`flex justify-center mb-10 ${baseAnim} ${show}`}
           style={{ transitionDelay: '80ms' }}
+          >
+        </div>
         <div
           className={`inline-flex items-center gap-2 px-4 py-2 bg-white/70 backdrop-blur-sm rounded-full shadow-sm mb-8 ${baseAnim} ${show}`}
           style={{ transitionDelay: '200ms' }}
