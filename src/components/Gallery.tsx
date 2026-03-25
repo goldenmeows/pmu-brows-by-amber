@@ -36,6 +36,7 @@ export default function Gallery() {
   fontFamily: 'Cormorant, serif',
   fontWeight: 400,
   fontSize: "30px",
+  font-style: italic;
   letterSpacing: "0.38em",
   textTransform: "uppercase",
   color: "#C8A067",
