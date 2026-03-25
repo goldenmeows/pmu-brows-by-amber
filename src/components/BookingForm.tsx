@@ -36,7 +36,7 @@ export default function Booking() {
           <div className="lg:sticky lg:top-24">
 
             <div className="inline-flex items-center gap-2 rounded-full border border-[#3B2A24]/10 bg-white/80 px-4 py-2 text-sm font-medium text-[#3B2A24] shadow-sm backdrop-blur">
-              <Sparkles className="h-4 w-4" />
+              <Sparkles className="h-4 w-4" aria-hidden="true" />
               Smooth online booking
             </div>
 
@@ -53,7 +53,7 @@ export default function Booking() {
             <div className="mt-8 space-y-4">
 
               <div className="flex items-start gap-3 rounded-2xl bg-white/80 p-4 shadow-sm ring-1 ring-black/5">
-                <CalendarDays className="mt-0.5 h-5 w-5 text-[#3B2A24]" />
+                <CalendarDays className="mt-0.5 h-5 w-5 text-[#3B2A24]" aria-hidden="true" />
                 <div>
                   <p className="font-semibold text-stone-900">
                     Easy scheduling
@@ -65,7 +65,7 @@ export default function Booking() {
               </div>
 
               <div className="flex items-start gap-3 rounded-2xl bg-white/80 p-4 shadow-sm ring-1 ring-black/5">
-                <Clock3 className="mt-0.5 h-5 w-5 text-[#3B2A24]" />
+                <Clock3 className="mt-0.5 h-5 w-5 text-[#3B2A24]" aria-hidden="true" />
                 <div>
                   <p className="font-semibold text-stone-900">
                     Quick and convenient
@@ -77,7 +77,7 @@ export default function Booking() {
               </div>
 
               <div className="flex items-start gap-3 rounded-2xl bg-white/80 p-4 shadow-sm ring-1 ring-black/5">
-                <MapPin className="mt-0.5 h-5 w-5 text-[#3B2A24]" />
+                <MapPin className="mt-0.5 h-5 w-5 text-[#3B2A24]" aria-hidden="true" />
                 <div>
                   <p className="font-semibold text-stone-900">
                     Professional care

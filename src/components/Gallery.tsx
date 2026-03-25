@@ -70,14 +70,17 @@ export default function Gallery() {
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
           onClick={() => setSelectedImage(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-title"
         >
           <button
             type="button"
-            className="absolute top-4 right-4 p-2 bg-white/10 hover:bg-white/20 rounded-full text-white transition-colors"
-            aria-label="Close"
+            className="absolute top-4 right-4 p-2 bg-white/10 hover:bg-white/20 rounded-full text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white"
+            aria-label="Close image"
             onClick={() => setSelectedImage(null)}
           >
-            <X className="w-6 h-6" />
+            <X className="w-6 h-6" aria-hidden="true" />
           </button>
           <div
             className="max-w-4xl max-h-[90vh] w-full"
@@ -89,7 +92,7 @@ export default function Gallery() {
               className="max-w-full max-h-[85vh] object-contain rounded-lg mx-auto"
             />
             <div className="mt-4 text-center">
-              <h3 className="text-white text-2xl font-semibold">{selectedImage.title}</h3>
+              <h3 className="text-white text-2xl font-semibold" id="modal-title">{selectedImage.title}</h3>
               <p className="text-rose-300 capitalize mt-1">{selectedImage.category}</p>
             </div>
           </div>

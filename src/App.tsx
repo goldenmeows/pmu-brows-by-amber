@@ -33,7 +33,7 @@ function App() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-stone-50">
-        <div className="animate-pulse text-xl text-rose-400">Loading...</div>
+        <div className="animate-pulse text-xl text-rose-400" role="status" aria-live="polite">Loading...</div>
       </div>
     );
   }
