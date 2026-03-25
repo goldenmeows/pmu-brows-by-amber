@@ -68,7 +68,6 @@ export default function Gallery() {
               </button>
             ))}
           </div>
-        </div>
       </section>
 
       {selectedImage && (
