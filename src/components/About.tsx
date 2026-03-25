@@ -58,7 +58,7 @@ const styles = `
   /* ─── Shared: label + ornament ─── */
   .ab-label {
     text-align: center;
-    font-family: 'Jost', sans-serif;
+    font-family: 'Cormorant, serif';
     font-weight: 400;
     font-size: 30px;
     letter-spacing: 0.38em;
