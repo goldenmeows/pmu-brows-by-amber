@@ -96,9 +96,6 @@ export default function Gallery() {
               alt={selectedImage.title}
               className="max-w-full max-h-[85vh] object-contain rounded-lg mx-auto"
             />
-            <div className="mt-4 text-center">
-              <h3 className="text-white text-2xl font-semibold" id="modal-title">{selectedImage.title}</h3>
-              <p className="text-rose-300 capitalize mt-1">{selectedImage.category}</p>
             </div>
           </div>
         </div>
