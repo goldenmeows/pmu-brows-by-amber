@@ -58,10 +58,10 @@ const styles = `
   /* ─── Shared: label + ornament ─── */
   .ab-label {
     text-align: center;
-    font-family: 'Cormorant', serif';
+    font-family: 'Cormorant', serif;
     font-weight: 600;
-    font-size: 30px;
-    font-style: italic,
+    font-size: 50px;
+    font-style: italic;
     color: #C8A067;
     margin-bottom: 18px;
 
