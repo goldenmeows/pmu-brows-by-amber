@@ -37,8 +37,6 @@ export default function Gallery() {
   fontWeight: 400,
   fontSize: "30px",
   fontStyle: "italic",
-  letterSpacing: "0.38em",
-  textTransform: "uppercase",
   color: "#C8A067",
   marginBottom: "18px"
 }}>
