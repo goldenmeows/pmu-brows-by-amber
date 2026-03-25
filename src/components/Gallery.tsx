@@ -63,9 +63,6 @@ export default function Gallery() {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 lg:p-6">
-                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-xl mb-1">{item.title}</h3>
-                    <p className="text-rose-200 text-xs sm:text-sm capitalize">{item.category}</p>
                   </div>
                 </div>
               </button>
