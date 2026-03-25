@@ -61,8 +61,7 @@ const styles = `
     font-family: 'Cormorant', serif';
     font-weight: 400;
     font-size: 30px;
-    letter-spacing: 0.38em;
-    text-transform: uppercase;
+    font-style: italic,
     color: #C8A067;
     margin-bottom: 18px;
   }
