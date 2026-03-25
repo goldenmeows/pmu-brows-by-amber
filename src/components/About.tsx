@@ -60,7 +60,7 @@ const styles = `
     text-align: center;
     font-family: 'Jost', sans-serif;
     font-weight: 400;
-    font-size: 10px;
+    font-size: 30px;
     letter-spacing: 0.38em;
     text-transform: uppercase;
     color: #C8A067;
