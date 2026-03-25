@@ -298,9 +298,6 @@ export default function About() {
     <>
       <style>{styles}</style>
       <section className="ab-section">
-        <div className="ab-inner">
-          </div>
-
           <div className="ab-grid">
 
             {/* LEFT */}
