@@ -61,7 +61,7 @@ const styles = `
     font-family: 'Cormorant', serif';
     font-weight: 600;
     font-size: 50px;
-    font-style:'italic',
+    font-style: italic,
     color: #C8A067;
     margin-bottom: 18px;
 
