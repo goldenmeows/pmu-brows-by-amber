@@ -60,8 +60,8 @@ const styles = `
     text-align: center;
     font-family: 'Cormorant', serif';
     font-weight: 400;
-    font-size: 30px;
-    font-style: italic,
+    font-size: 50px;
+    font-style:'italic',
     color: #C8A067;
     margin-bottom: 18px;
   }
