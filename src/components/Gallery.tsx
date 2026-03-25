@@ -31,7 +31,7 @@ export default function Gallery() {
       <section id="gallery" className="py-20 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="t  text-align: center;
+            <h2 className="text-align: center;
     font-family: 'Jost', sans-serif;
     font-weight: 400;
     font-size: 30px;
