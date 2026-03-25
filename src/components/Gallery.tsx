@@ -33,7 +33,7 @@ export default function Gallery() {
           <div className="text-center mb-12 sm:mb-16">
 <h2 style={{
   textAlign: "center",
-  fontFamily: "'Jost', sans-serif",
+  fontFamily: 'Cormorant, serif',
   fontWeight: 400,
   fontSize: "30px",
   letterSpacing: "0.38em",
