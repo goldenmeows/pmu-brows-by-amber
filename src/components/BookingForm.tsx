@@ -47,7 +47,7 @@ export default function Booking() {
 
             <p className="mt-5 max-w-lg text-lg leading-8 text-stone-600">
               Choose your appointment time directly below for a seamless booking
-              experience.
+              experience for your PMU Appointment in Benicia, CA | Brows by Amber
             </p>
 
             <div className="mt-8 space-y-4">
