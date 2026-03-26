@@ -21,7 +21,7 @@ const items: GalleryItem[] = [
 { id: 10, image_url: 'https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/gallery/pmu-brows-by-amber-powder-brow-benicia-ca-10.png', title: 'Flawless Brow Finish', alt: 'Flawless powder brow finish by permanent makeup artist Amber in Benicia, CA', category: '' },
 { id: 11, image_url: 'https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/gallery/pmu-brows-by-amber-powder-brow-benicia-ca-11.png', title: 'Natural Yet Defined', alt: 'Natural yet defined powder brow look by PMU Brows by Amber, Benicia, CA', category: '' },
 { id: 12, image_url: 'https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/gallery/pmu-brows-by-amber-powder-brow-benicia-ca-12.png', title: 'Beautiful Brow Transformation', alt: 'Beautiful brow transformation with powder brow permanent makeup by Amber in Benicia, CA', category: '' },
-
+];
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
 
