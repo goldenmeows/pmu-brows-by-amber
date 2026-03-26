@@ -9,19 +9,18 @@ interface GalleryItem {
 }
 
 const items: GalleryItem[] = [
-  { id: 1, image_url: 'https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/gallery/pmu-brows-by-amber-powder-brow-benicia-ca-1.png', title: 'Water and Smudge Proof Brows', category: '' },
-  { id: 2, image_url: 'https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/gallery/pmu-brows-by-amber-powder-brow-benicia-ca-2.png', title: 'Natural Brow Enhancement', category: '' },
-  { id: 3, image_url: 'https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/gallery/pmu-brows-by-amber-powder-brow-benicia-ca-3.png', title: 'Perfectly Filled-In Look', category: '' },
-  { id: 4, image_url: 'https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/gallery/pmu-brows-by-amber-powder-brow-benicia-ca-4.png', title: 'Beautifully Matching Eyebrows', category: '' },
-  { id: 5, image_url: 'https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/gallery/pmu-brows-by-amber-powder-brow-benicia-ca-5.png', title: 'Brows on Fleek', category: '' },
-  { id: 6, image_url: 'https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/gallery/pmu-brows-by-amber-powder-brow-benicia-ca-6.png', title: 'Soft Natural Results', category: '' },
-  { id: 7, image_url: 'https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/gallery/pmu-brows-by-amber-powder-brow-benicia-ca-7.png', title: 'Defined Brow Shape', category: '' },
-  { id: 8, image_url: 'https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/gallery/pmu-brows-by-amber-powder-brow-benicia-ca-8.png', title: 'Balanced Brow Enhancement', category: '' },
-  { id: 9, image_url: 'https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/gallery/pmu-brows-by-amber-powder-brow-benicia-ca-9.png', title: 'Elegant Powder Brows', category: '' },
-  { id: 10, image_url: 'https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/gallery/pmu-brows-by-amber-powder-brow-benicia-ca-10.png', title: 'Flawless Brow Finish', category: '' },
-  { id: 11, image_url: 'https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/gallery/pmu-brows-by-amber-powder-brow-benicia-ca-11.png', title: 'Natural Yet Defined', category: '' },
-  { id: 12, image_url: 'https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/gallery/pmu-brows-by-amber-powder-brow-benicia-ca-12.png', title: 'Beautiful Brow Transformation', category: '' },
-];
+ { id: 1, image_url: 'https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/gallery/pmu-brows-by-amber-powder-brow-benicia-ca-1.png', title: 'Water and Smudge Proof Brows', alt: 'Water and smudge proof powder brows by Amber in Benicia, CA', category: '' },
+{ id: 2, image_url: 'https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/gallery/pmu-brows-by-amber-powder-brow-benicia-ca-2.png', title: 'Natural Brow Enhancement', alt: 'Natural brow enhancement with permanent makeup powder brows in Benicia, CA', category: '' },
+{ id: 3, image_url: 'https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/gallery/pmu-brows-by-amber-powder-brow-benicia-ca-3.png', title: 'Perfectly Filled-In Look', alt: 'Perfectly filled-in powder brow look by PMU Brows by Amber in Benicia, CA', category: '' },
+{ id: 4, image_url: 'https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/gallery/pmu-brows-by-amber-powder-brow-benicia-ca-4.png', title: 'Beautifully Matching Eyebrows', alt: 'Beautifully symmetrical and matching powder eyebrows by Amber in Benicia, CA', category: '' },
+{ id: 5, image_url: 'https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/gallery/pmu-brows-by-amber-powder-brow-benicia-ca-5.png', title: 'Brows on Fleek', alt: 'On fleek permanent makeup powder brows by PMU Brows by Amber, Benicia, CA', category: '' },
+{ id: 6, image_url: 'https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/gallery/pmu-brows-by-amber-powder-brow-benicia-ca-6.png', title: 'Soft Natural Results', alt: 'Soft and natural powder brow results by Amber, permanent makeup artist in Benicia, CA', category: '' },
+{ id: 7, image_url: 'https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/gallery/pmu-brows-by-amber-powder-brow-benicia-ca-7.png', title: 'Defined Brow Shape', alt: 'Defined brow shape achieved with powder brow PMU technique in Benicia, CA', category: '' },
+{ id: 8, image_url: 'https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/gallery/pmu-brows-by-amber-powder-brow-benicia-ca-8.png', title: 'Balanced Brow Enhancement', alt: 'Balanced and symmetrical brow enhancement using powder brow technique by Amber in Benicia, CA', category: '' },
+{ id: 9, image_url: 'https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/gallery/pmu-brows-by-amber-powder-brow-benicia-ca-9.png', title: 'Elegant Powder Brows', alt: 'Elegant powder brows permanent makeup result by PMU Brows by Amber in Benicia, CA', category: '' },
+{ id: 10, image_url: 'https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/gallery/pmu-brows-by-amber-powder-brow-benicia-ca-10.png', title: 'Flawless Brow Finish', alt: 'Flawless powder brow finish by permanent makeup artist Amber in Benicia, CA', category: '' },
+{ id: 11, image_url: 'https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/gallery/pmu-brows-by-amber-powder-brow-benicia-ca-11.png', title: 'Natural Yet Defined', alt: 'Natural yet defined powder brow look by PMU Brows by Amber, Benicia, CA', category: '' },
+{ id: 12, image_url: 'https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/gallery/pmu-brows-by-amber-powder-brow-benicia-ca-12.png', title: 'Beautiful Brow Transformation', alt: 'Beautiful brow transformation with powder brow permanent makeup by Amber in Benicia, CA', category: '' },
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
