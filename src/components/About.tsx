@@ -2,17 +2,17 @@ import { useState } from "react";
 
 const teamImages = [
   {
-    src: "https://raw.githubusercontent.com/goldenmeows/pmu-brows-by-amber/main/public/honey-glow-beauty-bar-brows-by-amber-benicia-ca-2.png",
+    src: "/honey-glow-beauty-bar-brows-by-amber-benicia-ca-2.png",
     alt: "Honey Glow Beauty Bar team in Benicia CA",
     caption: "At Honey Glow Beauty Bar in Benicia, CA — never overpower the beauty you already have, just give it a little glow.",
   },
   {
-    src: "https://raw.githubusercontent.com/goldenmeows/pmu-brows-by-amber/main/public/honey-glow-beauty-bar-brows-by-amber-benicia-ca-1.png",
+    src: "/honey-glow-beauty-bar-brows-by-amber-benicia-ca-1.png",
     alt: "Amber powder brow artist at Honey Glow Beauty Bar",
     caption: "From lash lifts to customized facials — every woman leaves 100% satisfied.",
   },
   {
-    src: "https://raw.githubusercontent.com/goldenmeows/pmu-brows-by-amber/main/public/honey-glow-beauty-bar-brows-by-amber-benicia-ca-3.png",
+    src: "/honey-glow-beauty-bar-brows-by-amber-benicia-ca-3.png",
     alt: "Honey Glow Beauty Bar studio Benicia CA",
     caption: "Powder brows that transform how you look and feel — no makeup routine required.",
   },
@@ -585,7 +585,7 @@ export default function About() {
             <div className="ab-artist-portrait-col">
               <div className="ab-portrait-wrap">
                 <img
-                  src="https://raw.githubusercontent.com/goldenmeows/pmubrowsbyamber/main/public/pmu-brows-by-amber-benicia-ca.png"
+                  src="/pmu-brows-by-amber-benicia-ca.png"
                   alt="Amber Amazar, permanent powder brow artist at Honey Glow Beauty Bar in Benicia, California"
                   referrerPolicy="no-referrer"
                 />
